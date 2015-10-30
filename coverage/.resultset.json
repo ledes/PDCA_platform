@@ -561,6 +561,7 @@
         null,
         1,
         1,
+        1,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/spec/support/valid_attribute.rb": [
@@ -576,7 +577,6 @@
         3,
         1,
         1,
-        null,
         null,
         null
       ],
@@ -654,10 +654,44 @@
         null,
         null
       ],
+      "/Users/pablo/Documents/projects/pdca_platform/spec/models/course_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/pablo/Documents/projects/pdca_platform/app/models/course.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/pablo/Documents/projects/pdca_platform/spec/models/courses_user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/pablo/Documents/projects/pdca_platform/app/models/courses_user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/pablo/Documents/projects/pdca_platform/spec/models/user_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         null
@@ -676,7 +710,9 @@
         null,
         null,
         null,
+        null,
         12,
+        null,
         null,
         null,
         null,
@@ -691,6 +727,6 @@
         null
       ]
     },
-    "timestamp": 1446233456
+    "timestamp": 1446234734
   }
 }
