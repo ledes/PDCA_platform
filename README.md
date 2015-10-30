@@ -1,6 +1,7 @@
 # PDCA Home. Online Learning Platform
 [ ![Codeship Status for ledes/PDCA_platform](https://codeship.com/projects/00072460-6152-0133-9cd6-066368b87f16/status?branch=master)](https://codeship.com/projects/112460)
-[![Coverage Status](https://coveralls.io/repos/ledes/PDCA_platform/badge.svg?branch=master&service=github)](https://coveralls.io/github/ledes/PDCA_platform?branch=master)
+[![Code Climate](https://codeclimate.com/github/ledes/PDCA_platform/badges/gpa.svg)](https://codeclimate.com/github/ledes/PDCA_platform)
+[![Test Coverage](https://codeclimate.com/github/ledes/PDCA_platform/badges/coverage.svg)](https://codeclimate.com/github/ledes/PDCA_platform/coverage)
 ## Under construction
 
 ## Description
