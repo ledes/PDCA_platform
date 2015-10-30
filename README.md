@@ -22,4 +22,6 @@ SASS
 
 ## ER Diagram
 
+![Imgur](http://i.imgur.com/M5lbluU.png)
+
 ## Features
