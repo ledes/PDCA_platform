@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  # def admin_only!
+  #   if !current_user.admin?
+  #     redirect_to after_sign_in_path_for(current_user)
+  #   end
+  # end
+
+
   protected
 
   def configure_permitted_parameters
