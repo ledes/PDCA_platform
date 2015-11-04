@@ -1,8 +1,8 @@
 class CoursesUsersTable < ActiveRecord::Migration
   def change
-    create_table :courses_users do |t|
-      t.references :user, null: false
-      t.references :course, null: false
+    create_table :course_users do |t|
+      t.belongs_to :user, null: false
+      t.belongs_to :course, null: false
     end
   end
 end
