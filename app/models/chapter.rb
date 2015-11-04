@@ -3,6 +3,4 @@ class Chapter < ActiveRecord::Base
 
   validates :lesson_id, presence: true
   validates :body, presence: true
-
-
 end
