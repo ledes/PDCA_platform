@@ -5,6 +5,8 @@
 [PDCA home](http://www.pdcahome.com) is a social Media of Quality Assurance workers.
 This app is been built in order to provide courses to its users.
 
+[Trello Board](https://trello.com/b/M455JKQp/pdca-platform)
+
 ## Ruby version
 
 2.2.3
@@ -16,9 +18,10 @@ PostgreSQL
 Javascript/JQuery/React
 HTML
 SASS
+Haml
 
 ## ER Diagram
 
-![Imgur](http://i.imgur.com/M5lbluU.png)
+![Imgur](http://i.imgur.com/2Ic8NmT.png)
 
 ## Features
