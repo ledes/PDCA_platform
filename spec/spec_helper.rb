@@ -1,5 +1,5 @@
-require 'coveralls'
-require 'support/login_helper'
+require "coveralls"
+require "support/login_helper"
 
 Coveralls.wear!
 

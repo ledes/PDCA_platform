@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-feature 'user sees users list', %Q{
+feature "user sees users list", %{
   As a user
   I want to see other users' profile
   So I can see what they are interested about
@@ -12,5 +12,4 @@ feature 'user sees users list', %Q{
     visit users_path
     expect(page).to have_content("List of users")
   end
-
 end

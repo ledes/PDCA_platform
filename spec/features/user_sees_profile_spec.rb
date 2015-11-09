@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-feature "user sees user's show page", %Q{
+feature "user sees user's show page", %{
   As a user
   I want to see the list of users
   so I can decide what profile I will visit

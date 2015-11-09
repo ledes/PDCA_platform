@@ -13,16 +13,16 @@ RSpec.describe User, type: :model do
       :user,
       email: "workingjoe@yahoo.com",
       first_name: "Sam"
-      )
+    )
     joe = FactoryGirl.create(
       :user,
       first_name: "Joe"
-      )
+    )
     nick = FactoryGirl.create(
       :user,
       first_name: "Nick",
       last_name: "Samuels"
-      )
+    )
     expect(User.search("joe")) == [sam, joe]
   end
 end
