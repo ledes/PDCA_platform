@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :role, presence: true
+
+  def self.search(query)
+    where("first_name ILIKE ? OR last_name ILIKE ?", "%#{query}%","%#{query}%")
+  end
 end

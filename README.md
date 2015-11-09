@@ -1,4 +1,4 @@
-# PDCA Home. Online Learning Platform
+# PDCA School. Online Learning Platform
 [ ![Codeship Status for ledes/PDCA_platform](https://codeship.com/projects/00072460-6152-0133-9cd6-066368b87f16/status?branch=master)](https://codeship.com/projects/112460)
 
 ## Description

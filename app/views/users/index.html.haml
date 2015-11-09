@@ -1,0 +1,10 @@
+%br/
+= form_tag(users_path, method: "get", class: "user-search") do
+  = text_field_tag :search, params[:search], placeholder: "Search Users"
+  = submit_tag "Search", name: nil, class: "button small"
+%h1 List of users
+- @users.each do |user|
+  %ul
+    %li= link_to "#{user.first_name} #{user.last_name}" , user_path(user)
+
+= paginate @users
