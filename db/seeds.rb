@@ -13,3 +13,12 @@ User.create(
   password: "12345678",
   role: "Admin"
 )
+
+12.times do
+  Course.create(
+    title: Faker::Name.title,
+    description: Faker::Lorem.paragraph,
+    duration: Faker::Number.number(2),
+    price: Faker::Number.number(2)
+  )
+end
