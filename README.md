@@ -22,6 +22,7 @@ Haml
 
 ## ER Diagram
 
+
 ![Imgur](http://i.imgur.com/03GDjig.png)
 
 

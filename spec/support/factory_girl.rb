@@ -8,4 +8,11 @@ FactoryGirl.define do
     password 'password'
     password_confirmation 'password'
   end
+
+  factory :course do
+    title Faker::Name.title
+    description Faker::Lorem.paragraph
+    duration Faker::Number.number(2)
+    price Faker::Number.number(2)
+  end
 end
