@@ -16,10 +16,10 @@
             %span Menu
       %section.top-bar-section
         %ul.right
-          -if current_user.role =='Admin'
-            %li= link_to "Dashboard", admin_courses_path
           %li= link_to "Courses", courses_path
           - if current_user
+            -if current_user.role =='Admin'
+              %li= link_to "Dashboard", admin_courses_path
             %li.has-dropdown
               %a{:href => "#"} #{current_user.first_name}
               %ul.dropdown
