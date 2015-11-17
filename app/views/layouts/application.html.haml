@@ -16,6 +16,8 @@
             %span Menu
       %section.top-bar-section
         %ul.right
+          -if current_user.role =='Admin'
+            %li= link_to "Dashboard", admin_courses_path
           %li= link_to "Courses", courses_path
           - if current_user
             %li.has-dropdown
@@ -29,8 +31,9 @@
             %li= link_to 'Sign In', new_user_session_path
 
     - flash.each do |key, value|
-      %div{:class => "flash flash-#{key}"}
+      %div{:class => "alert-box #{key}"}
         = value
+
     = yield
     = javascript_include_tag 'application'
     = yield :extra_footer
