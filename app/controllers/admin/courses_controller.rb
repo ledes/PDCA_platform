@@ -1,5 +1,4 @@
-class Admin::CoursesController <  ApplicationController
-  # skip_before_filter :verify_authenticity_token
+class Admin::CoursesController < ApplicationController
 
   def index
     n_page = params[:page]
@@ -22,7 +21,7 @@ class Admin::CoursesController <  ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      flash[:notice]= "Course created"
+      flash[:notice] = "Course created"
       redirect_to admin_courses_path
     else
       flash[:errors] = "Something went wrong!"

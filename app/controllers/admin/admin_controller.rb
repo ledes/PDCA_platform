@@ -1,5 +1,5 @@
 class Admin::AdminController < Admin::CoursesController
-  before_filter :admin_only!
+  before_action :admin_only!
 
   def admin_only!
     if !current_user.admin?

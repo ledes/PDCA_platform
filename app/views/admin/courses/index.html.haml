@@ -7,9 +7,9 @@
 %ul
   - @courses.each do |course|
     %li= link_to course.title, admin_course_path(course)
-    =link_to "Edit", "#"
-    =link_to "Delete", "#"
+    = link_to "Edit", "#"
+    = link_to "Delete", "#"
 
 = paginate @courses
 
-=link_to "New course", new_admin_course_path
+= link_to "New course", new_admin_course_path

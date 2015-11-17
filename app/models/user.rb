@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    self.role == "Admin"
+    role == "Admin"
   end
 end
