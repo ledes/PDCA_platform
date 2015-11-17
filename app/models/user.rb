@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
   def self.search(query)
     where("first_name ILIKE ? OR last_name ILIKE ?", "%#{query}%","%#{query}%")
   end
+
+  def admin?
+    role == "Admin"
+  end
 end

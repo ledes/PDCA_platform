@@ -1,0 +1,15 @@
+%br/
+= form_tag(courses_path, method: "get") do
+  = text_field_tag :search, params[:search], placeholder: "Search Courses"
+  = submit_tag "Search", name: nil, class: "button small"
+
+%h1 List of courses
+%ul
+  - @courses.each do |course|
+    %li= link_to course.title, admin_course_path(course)
+    = link_to "Edit", "#"
+    = link_to "Delete", "#"
+
+= paginate @courses
+
+= link_to "New course", new_admin_course_path

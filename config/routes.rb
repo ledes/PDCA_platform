@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   namespace :admin do
+    resources :courses
   end
 
-  namespace :app do
-  end
-
-  resources :courses
+  resources :courses, only: [:index, :show]
 end
