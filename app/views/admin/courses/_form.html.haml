@@ -2,16 +2,16 @@
   %input{ type: "hidden", name: "authenticity_token", value: form_authenticity_token }
 
   %label Title
-  %input{type: "text", name: "course[title]", value: @course.title}
+  %input{ type: "text", name: "course[title]", value: @course.title }
 
   %label Description
-  %input{type: "text", name: "course[description]", value: @course.description}
+  %input{ type: "text", name: "course[description]", value: @course.description }
 
   %label Duration
-  %input{type: "number", name: "course[duration]", value: @course.duration}
+  %input{ type: "number", name: "course[duration]", value: @course.duration }
 
 
   %label Price
-  %input{type: "number", name: "course[price]", value: @course.price}
+  %input{ type: "number", name: "course[price]", value: @course.price }
 
   %button{ type: "submit" } Submit

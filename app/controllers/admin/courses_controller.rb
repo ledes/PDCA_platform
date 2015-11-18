@@ -37,11 +37,11 @@ class Admin::CoursesController < ApplicationController
     @course = Course.find(params[:id])
     if @course.update_attributes(course_params)
       flash[:success] = "Course edited successfully"
-       redirect_to admin_course_path(@course)
-     else
+      redirect_to admin_course_path(@course)
+    else
        flash[:alert] = "Something went wrong"
        render :edit
-     end
+    end
   end
 
   def destroy
