@@ -29,9 +29,31 @@ class Admin::CoursesController < ApplicationController
     end
   end
 
+  def edit
+    @course = Course.find(params[:id])
+  end
+
+  def update
+    @course = Course.find(params[:id])
+    if @course.update_attributes(course_params)
+      flash[:success] = "Course edited successfully"
+       redirect_to admin_course_path(@course)
+     else
+       flash[:alert] = "Something went wrong"
+       render :edit
+     end
+  end
+
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    flash[:notice] = "Course deleted"
+    redirect_to admin_courses_path
+  end
+
   protected
 
   def course_params
-    params.permit(:title, :description, :duration, :price)
+    params.require(:course).permit(:title, :description, :duration, :price)
   end
 end
