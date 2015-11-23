@@ -1,0 +1,11 @@
+= form_for [:admin, @course, @lesson] do |f|
+  %input{ type: "hidden", name: "authenticity_token", value: form_authenticity_token }
+  %input{ type: "hidden", name: "lesson[course_id]", value: @course.id }
+
+  %label Title
+  = f.text_field :title, value: @lesson.title
+
+  %label Priority
+  = f.number_field :priority, value: @lesson.priority
+
+  %button{ type: "submit" } Submit
