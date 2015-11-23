@@ -2,3 +2,6 @@
 %p Description: #{@course.description}
 %p Duration: #{@course.duration}
 %p Price: #{@course.price}
+%ul
+  - @course.lessons.each do |lesson|
+    %li #{lesson.title}

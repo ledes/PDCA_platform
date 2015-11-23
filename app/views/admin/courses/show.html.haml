@@ -6,3 +6,7 @@
 = link_to "Add lesson", new_admin_course_lesson_path(@course)
 = link_to "Add quizz", "#"
 = link_to 'Delete', admin_course_path(@course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"
+
+%ul
+  - @course.lessons.each do |lesson|
+    %li #{lesson.title}

@@ -72,10 +72,6 @@ feature "admin CRUD actions for a course", %{
     expect(page).to have_content("Course deleted")
   end
 
-  scenario "admin adds a lesson to a course" do
-    visit admin_course_path(@course1)
-    click_on "Add lesson"
-  end
 
   scenario "admin adds a quizz to a course" do
   end

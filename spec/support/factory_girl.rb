@@ -15,4 +15,9 @@ FactoryGirl.define do
     duration Faker::Number.number(2)
     price Faker::Number.number(2)
   end
+
+  factory :lesson do
+    title Faker::Name.title
+    priority Faker::Number.number(1)
+  end
 end

@@ -15,7 +15,6 @@ feature "CRUD actions for lessons", %{
     visit admin_course_path(@course1)
     click_on "Add lesson"
     expect(page).to have_content('New Lesson')
-
   end
 
   scenario "admin adds a new lesson to a course" do
@@ -30,6 +29,12 @@ feature "CRUD actions for lessons", %{
     visit new_admin_course_lesson_path(@course1)
     click_on "Submit"
     expect(page).to have_content("Title can't be blank and Priority can't be blank")
+  end
+
+  scenario "admin sees all the lessons for a course" do
+    lesson = FactoryGirl.create(:lesson, course_id: @course1.id)
+    visit admin_course_path(@course1)
+    expect(page).to have_content(lesson.title)
   end
 
 end
