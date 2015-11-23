@@ -1,18 +1,18 @@
 class Admin::LessonsController < ApplicationController
 
   def new
+    @course = Course.find(params[:course_id])
     @lesson = Lesson.new
   end
 
   def create
-    @course = Course.find(params[:id])
-    @lesson.new(lesson_params)
+    @course = Course.find(params[:course_id])
+    @lesson = Lesson.new(lesson_params)
     if @lesson.save
       flash[:notice] = "Lesson added"
       redirect_to admin_course_path(@course)
-
     else
-      flash[:alert] = "Something went wrong"
+      flash[:alert] =  @lesson.errors.full_messages.to_sentence
       redirect_to :back
     end
   end
