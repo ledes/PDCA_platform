@@ -9,4 +9,6 @@
 
 %ul
   - @course.lessons.each do |lesson|
-    %li #{lesson.title}
+    %li= link_to "#{lesson.title}", admin_course_lesson_path(@course, lesson)
+    = link_to "Edit lesson", edit_admin_course_lesson_path(@course, lesson)
+    = link_to "Delete lesson", admin_course_lesson_path(@course, lesson), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete 

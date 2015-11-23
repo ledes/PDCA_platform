@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :courses do
-      resources :lessons
+      resources :lessons, except: [:index]
     end
   end
 
   resources :courses, only: [:index, :show] do
-    resources :lessons, only: [:index, :show]
+    resources :lessons, only: [:show]
   end
 end

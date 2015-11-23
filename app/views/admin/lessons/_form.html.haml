@@ -1,4 +1,4 @@
-= form_for [:admin, :course, @lesson] do |f|
+= form_for [:admin, @course, @lesson] do |f|
   %input{ type: "hidden", name: "authenticity_token", value: form_authenticity_token }
   %input{ type: "hidden", name: "lesson[course_id]", value: @course.id }
 
