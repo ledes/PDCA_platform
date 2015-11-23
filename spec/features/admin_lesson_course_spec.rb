@@ -16,7 +16,7 @@ feature "CRUD actions for lessons", %{
   scenario "Admin visits new lesson page" do
     visit admin_course_path(@course)
     click_on "Add lesson"
-    expect(page).to have_content('New Lesson')
+    expect(page).to have_content("New Lesson")
   end
 
   scenario "Admin adds a new lesson to a course" do
@@ -41,7 +41,7 @@ feature "CRUD actions for lessons", %{
   scenario "Admin visit edit page of a lesson" do
     visit admin_course_path(@course)
     click_on "Edit lesson"
-    expect(page).to have_content('Edit Lesson')
+    expect(page).to have_content("Edit Lesson")
   end
 
   scenario "Admin edits a lesson" do
@@ -61,9 +61,8 @@ feature "CRUD actions for lessons", %{
   scenario "Admin deletes a lesson from course's show page" do
     visit admin_course_path(@course)
     click_on "Delete lesson"
-    expect(page).to have_content('Lesson deleted')
+    expect(page).to have_content("Lesson deleted")
     expect(page).to_not have_content(@lesson.title)
-
   end
 
   scenario "Admin deletes a lesson from lesson's edit page" do
