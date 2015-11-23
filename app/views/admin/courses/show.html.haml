@@ -3,6 +3,6 @@
 %p Duration: #{@course.duration}
 %p Price: #{@course.price}
 = link_to "Edit info", edit_admin_course_path(@course)
-= link_to "Add lesson", "#"
+= link_to "Add lesson", new_admin_course_lesson_path(@course)
 = link_to "Add quizz", "#"
 = link_to 'Delete', admin_course_path(@course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"

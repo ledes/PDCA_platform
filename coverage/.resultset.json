@@ -81,7 +81,6 @@
         null,
         1,
         null,
-        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/spec/rails_helper.rb": [
@@ -870,6 +869,8 @@
         null,
         2,
         2,
+        2,
+        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/app/models/lesson.rb": [
@@ -877,6 +878,7 @@
         1,
         1,
         null,
+        1,
         1,
         1,
         null
@@ -1062,6 +1064,6 @@
         null
       ]
     },
-    "timestamp": 1447880841
+    "timestamp": 1448290877
   }
 }

@@ -73,6 +73,8 @@ feature "admin CRUD actions for a course", %{
   end
 
   scenario "admin adds a lesson to a course" do
+    visit admin_course_path(@course1)
+    click_on "Add lesson"
   end
 
   scenario "admin adds a quizz to a course" do

@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   namespace :admin do
-    resources :courses
+    resources :courses do
+      resources :lessons, except: [:index]
+    end
   end
 
-  resources :courses, only: [:index, :show]
+  resources :courses, only: [:index, :show] do
+    resources :lessons, only: [:index, :show]
+  end
 end
