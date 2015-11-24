@@ -678,7 +678,6 @@
         1,
         null,
         null,
-        null,
         1,
         1,
         1,
@@ -978,7 +977,6 @@
         2,
         2,
         2,
-        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/app/models/lesson.rb": [
@@ -1212,11 +1210,9 @@
       ],
       "/Users/pablo/Documents/projects/pdca_platform/app/controllers/lessons_controller.rb": [
         1,
-        null,
         1,
         1,
         1,
-        null,
         null,
         null
       ],
@@ -1238,6 +1234,6 @@
         null
       ]
     },
-    "timestamp": 1448303411
+    "timestamp": 1448380408
   }
 }
