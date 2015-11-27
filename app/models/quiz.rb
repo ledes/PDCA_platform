@@ -7,5 +7,4 @@ class Quiz < ActiveRecord::Base
   validates :question, presence: true
   validates :right_answer, presence: true
   validates :response_A, presence: true
-
 end

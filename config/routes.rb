@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :courses do
       resources :lessons, except: [:index]
+      resources :quizzes, except: [:index]
     end
   end
 
   resources :courses, only: [:index, :show] do
     resources :lessons, only: [:show]
   end
+
+
 end
