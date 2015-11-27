@@ -9,7 +9,7 @@ class Quizzes < ActiveRecord::Migration
       t.string :response_D
       t.boolean :taken?, default: false
       t.boolean :pass?, default: false
-      t.belongs_to :user, null: false
+      t.belongs_to :user
       t.belongs_to :course, null: false
     end
   end

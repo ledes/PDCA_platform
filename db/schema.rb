@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20151127151242) do
     t.string  "response_D"
     t.boolean "taken?",       default: false
     t.boolean "pass?",        default: false
-    t.integer "user_id",                      null: false
+    t.integer "user_id"
     t.integer "course_id",                    null: false
   end
 
