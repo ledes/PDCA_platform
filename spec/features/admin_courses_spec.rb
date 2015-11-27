@@ -73,6 +73,6 @@ feature "admin CRUD actions for a course", %{
   end
 
 
-  scenario "admin adds a quizz to a course" do
+  scenario "admin adds a quiz to a course" do
   end
 end

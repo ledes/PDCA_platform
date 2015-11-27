@@ -8,7 +8,7 @@ class Quizzes < ActiveRecord::Migration
       t.string :response_C
       t.string :response_D
       t.belongs_to :user, null: false
-      t.belongs_to :course_id, null: false
+      t.belongs_to :course, null: false
     end
   end
 end

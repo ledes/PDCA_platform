@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20151127151242) do
     t.string  "response_C"
     t.string  "response_D"
     t.integer "user_id",      null: false
-    t.integer "course_id_id", null: false
+    t.integer "course_id",    null: false
   end
 
   create_table "users", force: :cascade do |t|
