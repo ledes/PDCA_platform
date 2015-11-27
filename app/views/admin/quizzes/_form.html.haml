@@ -1,0 +1,23 @@
+= form_for [:admin, @course, @quiz] do |f|
+  %input{ type: "hidden", name: "authenticity_token", value: form_authenticity_token }
+  %input{ type: "hidden", name: "quiz[course_id]", value: @course.id }
+
+  = f.label :question
+  = f.text_field :question, value: @quiz.question
+
+  = f.label :response_A
+  = f.text_field :response_A, value: @quiz.response_A
+
+  = f.label :response_B
+  = f.text_field :response_B, value: @quiz.response_B
+
+  = f.label :response_C
+  = f.text_field :response_C, value: @quiz.response_C
+
+  = f.label :response_D
+  = f.text_field :response_D, value: @quiz.response_D
+
+  %label Select correct response
+  = f.select :right_answer, [:response_A, :response_B, :response_C, :response_D]
+
+  %button{ type: "submit" } Submit

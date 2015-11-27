@@ -1,4 +1,5 @@
 class Course < ActiveRecord::Base
+  has_many :quizzes
   has_many :lessons
   has_many :course_users
   has_many :users, through: :course_users

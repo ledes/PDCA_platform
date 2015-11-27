@@ -20,4 +20,13 @@ FactoryGirl.define do
     title Faker::Name.title
     priority Faker::Number.number(1)
   end
+
+  factory :quiz do
+    question Faker::Name.title
+    right_answer "response_A"
+    response_A Faker::Number.number(199)
+    response_B Faker::Number.number(199)
+    response_C Faker::Number.number(199)
+    response_D Faker::Number.number(199)
+  end
 end
