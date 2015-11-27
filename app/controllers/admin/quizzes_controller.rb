@@ -45,6 +45,7 @@ class Admin::QuizzesController < ApplicationController
     flash[:notice] = "Quiz deleted"
     redirect_to admin_course_path(@course)
   end
+  
   protected
 
   def quiz_params
