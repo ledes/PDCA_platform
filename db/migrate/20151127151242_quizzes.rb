@@ -4,7 +4,7 @@ class Quizzes < ActiveRecord::Migration
       t.string :question, null: false
       t.string :right_answer, null: false
       t.string :response_A, null: false
-      t.string :response_B
+      t.string :response_B, null: false
       t.string :response_C
       t.string :response_D
       t.boolean :taken?, default: false

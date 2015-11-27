@@ -6,6 +6,7 @@ class Quiz < ActiveRecord::Base
   validates :question, presence: true
   validates :right_answer, presence: true
   validates :response_A, presence: true
+  validates :response_B, presence: true
   validates :taken?, default: false
   validates :pass?, default: false
 

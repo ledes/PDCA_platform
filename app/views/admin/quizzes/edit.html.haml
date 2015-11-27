@@ -1,3 +1,3 @@
 %h1 Edit Quiz
 = render "form"
-= link_to "Delete lesson", admin_course_quiz_path(@course, @quiz), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete
+= link_to "Delete quiz", admin_course_quiz_path(@course, @quiz), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete

@@ -3,7 +3,7 @@ require "rails_helper"
 feature "CRUD actions for lessons", %{
   As an admin
   I can create/edit/delete a lesson
-  So they can be manage the content of a course
+  So I can be manage the content of a course
 } do
   before(:each) do
     user = FactoryGirl.create(:user, role: "Admin")
@@ -27,7 +27,7 @@ feature "CRUD actions for lessons", %{
     expect(page).to have_content("Lesson added")
   end
 
-  scenario "Admin tries to submit a lesson blanck" do
+  scenario "Admin tries to submit a lesson blank" do
     visit new_admin_course_lesson_path(@course)
     click_on "Submit"
     expect(page).to have_content("Title can't be blank and Priority can't be blank")
