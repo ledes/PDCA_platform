@@ -9,5 +9,4 @@ class Quiz < ActiveRecord::Base
   validates :response_B, presence: true
   validates :taken?, default: false
   validates :pass?, default: false
-
 end

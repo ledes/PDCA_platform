@@ -33,8 +33,8 @@ class Admin::QuizzesController < ApplicationController
       flash[:success] = "Quiz edited successfully"
       redirect_to admin_course_path(@course)
     else
-       flash[:alert] = @quiz.errors.full_messages.to_sentence
-       render :edit
+      flash[:alert] = @quiz.errors.full_messages.to_sentence
+      render :edit
     end
   end
 

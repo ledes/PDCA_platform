@@ -558,8 +558,6 @@
         1,
         1,
         null,
-        null,
-        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/app/models/user.rb": [
@@ -1107,7 +1105,6 @@
         1,
         1,
         1,
-        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/spec/models/user_spec.rb": [
@@ -1422,6 +1419,6 @@
         null
       ]
     },
-    "timestamp": 1448650273
+    "timestamp": 1448650533
   }
 }

@@ -18,6 +18,6 @@
   = f.text_field :response_D, value: @quiz.response_D
 
   %label Select correct response
-  =f.select :right_answer, [:response_A, :response_B, :response_C, :response_D]
+  = f.select :right_answer, [:response_A, :response_B, :response_C, :response_D]
 
   %button{ type: "submit" } Submit

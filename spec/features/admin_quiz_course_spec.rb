@@ -25,7 +25,7 @@ feature "CRUD actions for quizzes", %{
     fill_in "Response b", with: "5why's"
     fill_in "Response c", with: "Lean"
     fill_in "Response d", with: "Six sigma"
-    select("response_B", :from => "quiz[right_answer]")
+    select("response_B", from: "quiz[right_answer]")
     click_on "Submit"
     expect(page).to have_content("Quiz added")
   end
@@ -56,7 +56,7 @@ feature "CRUD actions for quizzes", %{
     fill_in "Response b", with: "5why's"
     fill_in "Response c", with: "Lean"
     fill_in "Response d", with: "Six sigma"
-    select("response_B", :from => "quiz[right_answer]")
+    select("response_B", from: "quiz[right_answer]")
     click_on "Submit"
   end
 
