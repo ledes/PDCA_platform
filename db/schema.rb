@@ -41,14 +41,16 @@ ActiveRecord::Schema.define(version: 20151127151242) do
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.string  "question",     null: false
-    t.string  "right_answer", null: false
-    t.string  "response_A",   null: false
+    t.string  "question",                     null: false
+    t.string  "right_answer",                 null: false
+    t.string  "response_A",                   null: false
     t.string  "response_B"
     t.string  "response_C"
     t.string  "response_D"
-    t.integer "user_id",      null: false
-    t.integer "course_id",    null: false
+    t.boolean "taken?",       default: false
+    t.boolean "pass?",        default: false
+    t.integer "user_id",                      null: false
+    t.integer "course_id",                    null: false
   end
 
   create_table "users", force: :cascade do |t|

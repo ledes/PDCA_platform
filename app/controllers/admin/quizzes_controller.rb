@@ -48,6 +48,17 @@ class Admin::QuizzesController < ApplicationController
   protected
 
   def quiz_params
-    params.require(:quiz).permit(:title, :course_id, :priority)
+    params.require(:quiz).permit(
+      :course_id,
+      :user_id,
+      :question,
+      :right_answer,
+      :response_A,
+      :response_B,
+      :response_C,
+      :response_D,
+      :taken?,
+      :pass?
+    )
   end
 end
