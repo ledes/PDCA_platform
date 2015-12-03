@@ -13,12 +13,13 @@ This app is been built in order to provide courses to its users.
 
 ##Technical Specifications
 
-Ruby on Rails
-PostgreSQL
-Javascript/JQuery/React
-HTML
-SASS
-Haml
+* Ruby on Rails
+* PostgreSQL
+* Javascript/JQuery/AngularJS
+* HTML
+* SASS
+* Haml
+* Rspec/ Capybara / FactoryGirl
 
 ## ER Diagram
 
