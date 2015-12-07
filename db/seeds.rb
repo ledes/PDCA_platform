@@ -14,6 +14,13 @@ User.create(
   role: "Admin"
 )
 
+User.create(
+  first_name: "user",
+  last_name: "ble",
+  email: "ble@email.com",
+  password: "12345678",
+)
+
 12.times do
   Course.create(
     title: Faker::Name.title,

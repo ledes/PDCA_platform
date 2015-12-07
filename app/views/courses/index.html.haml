@@ -1,11 +1,44 @@
-%br/
-= form_tag(courses_path, method: "get") do
-  = text_field_tag :search, params[:search], placeholder: "Search Courses"
-  = submit_tag "Search", name: nil, class: "button small"
+.row.text-center
+  %h1 List of courses
 
-%h1 List of courses
-%ul
-  - @courses.each do |course|
-    %li= link_to course.title, course_path(course)
+/ control buttons
+.row
+  .small-12.columns.small-centered
+    %fieldset.controls
+      .row
+        / filter buttons
+        #controlsfilter.small-8.columns
+          %label Filter:
+          %button.filter.tiny.round.active{"data-filter" => "all"} All
+          %button.filter.tiny.round{"data-filter" => ".management"} Management
+          %button.filter.tiny.round{"data-filter" => ".sixsigma"} Six Sigma
+          %button.filter.tiny.round{"data-filter" => ".improvement"} Improvement
+        / layout buttons
+        #controlslayout.small-4.columns
+          %label Layout:
+          .controlslayout
+            %input#grid.grid{:checked => "checked", :name => "layout", :type => "radio"}/
+            %label#labelgrid{:for => "grid"}
+              %i.fa.fa-th
+            %input#list.list{:name => "layout", :type => "radio"}/
+            %label#labellist{:for => "list"}
+              %i.fa.fa-bars
+      .row
+        .small-12.columns.small-centered
+          %br/
+          = form_tag(courses_path, method: "get") do
+            .small-8.columns
+              = text_field_tag :search, params[:search], placeholder: "Search Courses"
+            .small-4.columns
+              = submit_tag "Search", name: nil, class: "button small"
+.row
+  / container for courses
+  .small-12.columns.small-centered
+    #Container.container
+      %ul.small-block-grid-3.medium-block-grid-4.large-block-grid-5
+        - @courses.each do |course|
+          %li= link_to course.title, course_path(course)
+        %li.gap
+        %li.gap
 
-= paginate @courses
+      = paginate @courses
