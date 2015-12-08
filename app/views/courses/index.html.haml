@@ -14,15 +14,7 @@
           %button.filter.tiny.round{"data-filter" => ".sixsigma"} Six Sigma
           %button.filter.tiny.round{"data-filter" => ".improvement"} Improvement
         / layout buttons
-        #controlslayout.small-4.columns
-          %label Layout:
-          .controlslayout
-            %input#grid.grid{:checked => "checked", :name => "layout", :type => "radio"}/
-            %label#labelgrid{:for => "grid"}
-              %i.fa.fa-th
-            %input#list.list{:name => "layout", :type => "radio"}/
-            %label#labellist{:for => "list"}
-              %i.fa.fa-bars
+
       .row
         .small-12.columns.small-centered
           %br/
@@ -34,11 +26,12 @@
 .row
   / container for courses
   .small-12.columns.small-centered
-    #Container.container
-      %ul.small-block-grid-3.medium-block-grid-4.large-block-grid-5
-        - @courses.each do |course|
+    %ul
+      - @courses.each do |course|
+        .large-6.columns#Container
           %li= link_to course.title, course_path(course)
-        %li.gap
-        %li.gap
+          %hr
 
-      = paginate @courses
+.row
+  .small-12.columns.small-centered
+    = paginate @courses
