@@ -17,7 +17,7 @@ feature "user sees user's show page", %{
 
   scenario "User sees links of his courses" do
     course = FactoryGirl.create(:course)
-    CourseUser.create(course: course,user: @user)
+    CourseUser.create(course: course, user: @user)
     visit user_path(@user)
     expect(page).to have_content(course.title)
   end

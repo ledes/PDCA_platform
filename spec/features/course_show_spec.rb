@@ -33,11 +33,9 @@ feature "user sees a courses", %{
   end
 
   scenario "user sees link to take the quizz" do
-
   end
 
   scenario "user clicks on quiz link" do
-
   end
 
 end

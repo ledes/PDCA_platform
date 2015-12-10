@@ -2,19 +2,21 @@
 %p Description: #{@course.description}
 %p Duration: #{@course.duration}
 %p Price: #{@course.price}
--if !current_user.courses.include?(@course)
-  =form_for [@course, CourseUser.new] do |f|
-    =f.text_field :course_id, value: @course.id, type: "hidden"
-    =f.text_field :user_id, value: current_user.id, type: "hidden"
-    =f.submit "Join course"
+- if !current_user.courses.include?(@course)
+  = form_for [@course, CourseUser.new] do |f|
+    = f.text_field :course_id, value: @course.id, type: "hidden"
+    = f.text_field :user_id, value: current_user.id, type: "hidden"
+    = f.submit "Join course"
   %ol
     %h2 Lessons
     - @course.lessons.each do |lesson|
-      %li #{lesson.title}
--else
+      %li=lesson.title
+- else
   %ol
     %h2 Lessons
     - @course.lessons.each do |lesson|
-      %li= link_to "#{lesson.title}", admin_course_lesson_path(@course, lesson), class: "links"
+      %li= link_to "#{lesson.title}",
+        admin_course_lesson_path(@course, lesson),
+        class: "links"
 
-  =link_to "Quiz", root_path
+  = link_to "Quiz", root_path
