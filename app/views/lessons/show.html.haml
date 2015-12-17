@@ -3,4 +3,14 @@
   %h2 Lesson #{@lesson.title}
 
 #content
-  %p Here there should be chapters.title and chapters.body. Button for next lesson
+  %h3 Content
+  - @chapters.each do |chapter|
+    %h4= chapter.chapter_name
+    %p= chapter.body
+
+  - if @lesson != @course.lessons.first
+    =link_to "Previous lesson", course_lesson_path(@course, (@lesson.id - 1))
+  - if @lesson != @course.lessons.last
+    =link_to "Next lesson", course_lesson_path(@course, (@lesson.id + 1) )
+  - else
+    = link_to "Quiz", root_path

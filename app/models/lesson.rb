@@ -5,4 +5,5 @@ class Lesson < ActiveRecord::Base
   validates :course_id, presence: true
   validates :title, presence: true
   validates :priority, presence: true
+
 end

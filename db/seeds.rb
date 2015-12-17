@@ -38,6 +38,15 @@ user2 = User.create(
       course: Course.last,
       priority: 1
     )
+    Chapter.create(
+      chapter_name: Faker::Name.title,
+      body:  Faker::Lorem.paragraph,
+      lesson: Lesson.last
+    )
+    Chapter.create(
+      body:  Faker::Lorem.paragraph,
+      lesson: Lesson.last
+    )
   end
   4.times do
     b = Faker::Name.title
