@@ -21,6 +21,11 @@ FactoryGirl.define do
     priority Faker::Number.number(1)
   end
 
+  factory :chapter do
+    body Faker::Lorem.paragraph
+    lesson_id 1
+  end
+
   factory :quiz do
     question Faker::Name.title
     right_answer "response_A"

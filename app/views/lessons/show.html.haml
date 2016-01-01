@@ -19,8 +19,8 @@
         %p= chapter.body
 
       - if @lesson != @course.lessons.first
-        = link_to "Previous lesson", course_lesson_path(@course, (@lesson.id - 1)), class:"small button"
+        = link_to "Previous lesson", course_lesson_path(@course, (@lesson.id - 1)), class:"small button", id: "previousButton"
       - if @lesson != @course.lessons.last
-        = link_to "Next lesson", course_lesson_path(@course, (@lesson.id + 1) ), class:"small button"
+        = link_to "Next lesson", course_lesson_path(@course, (@lesson.id + 1) ), class:"small button", id: "nextButton"
       - else
-        = link_to "Quiz", root_path, class:"small button"
+        = link_to "Quiz", root_path, class:"small button", id:"quizButton"
