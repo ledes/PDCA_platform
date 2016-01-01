@@ -41,10 +41,11 @@
  	bottom:0;
  	left:0;
  }
- @media screen and (min-width: 1025px) {
-    #content {
-        margin-bottom: -75px;
-    }
+ 
+@media screen and (min-width: 1025px) {
+  #content {
+      margin-bottom: -75px;
+  }
 }
 /*COURSES INDEX*/
  /** Controls **/
@@ -114,7 +115,6 @@
 /* Developer Bio */
 #DevBio {}
 
-
 /* Lesson show page */
 #lesson_content {
   margin: 0;
@@ -123,16 +123,12 @@
   background-color: #a3a3a3;
   height: 100%;
   padding-bottom: 10%;
-}
-
-.content li {
-  // list-style-type: none;
-  color: #e5e5e5;
-  font-size: 80%;
-
-}
-
-.content li a {
- font-style: normal;
- color: #e5e5e5;
+  li {
+    color: #e5e5e5;
+    font-size: 80%;
+    a {
+      font-style: normal;
+      color: #e5e5e5;
+    }
+  }
 }

@@ -9,8 +9,8 @@
     %ol
       %h2 Lessons
       - @course.lessons.each do |lesson|
-        %li=lesson.title
-  -elsif !current_user.courses.include?(@course)
+        %li= lesson.title
+  - elsif !current_user.courses.include?(@course)
     = form_for [@course, CourseUser.new] do |f|
       = f.text_field :course_id, value: @course.id, type: "hidden"
       = f.text_field :user_id, value: current_user.id, type: "hidden"
@@ -18,7 +18,7 @@
     %ol
       %h2 Lessons
       - @course.lessons.each do |lesson|
-        %li=lesson.title
+        %li= lesson.title
   - else
     %ol
       %h2 Lessons

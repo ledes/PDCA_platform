@@ -6,7 +6,7 @@ class LessonsController < ApplicationController
     if current_user.nil?
       flash[notice] = "You need to sign in first!"
       redirect_to course_path(@course)
-    elsif  !current_user.courses.include?(@course)
+    elsif !current_user.courses.include?(@course)
       flash[notice] = "You need to join the course first!"
       redirect_to course_path(@course)
     end
