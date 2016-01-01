@@ -14,7 +14,7 @@
     = form_for [@course, CourseUser.new] do |f|
       = f.text_field :course_id, value: @course.id, type: "hidden"
       = f.text_field :user_id, value: current_user.id, type: "hidden"
-      = f.submit "Join course"
+      = f.submit "Join course", class: "small button"
     %ol
       %h2 Lessons
       - @course.lessons.each do |lesson|

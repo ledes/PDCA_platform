@@ -595,7 +595,7 @@
         1,
         1,
         1,
-        43,
+        46,
         1,
         1,
         null,
@@ -844,14 +844,25 @@
         null,
         null,
         1,
-        1,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null,
         1,
         1,
         1,
         null,
         null,
         1,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        null,
         1,
         null,
         null
@@ -1108,6 +1119,7 @@
         1,
         1,
         1,
+        null,
         null
       ],
       "/Users/pablo/Documents/projects/pdca_platform/spec/models/quiz_spec.rb": [
@@ -1194,11 +1206,6 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         null,
         1,
@@ -1206,12 +1213,12 @@
         null,
         null,
         null,
-        82,
+        88,
         null,
         null,
         null,
         null,
-        82,
+        88,
         null,
         null
       ],
@@ -1419,7 +1426,7 @@
         null,
         null,
         1,
-        5,
+        6,
         null,
         null,
         null
@@ -1458,6 +1465,14 @@
         1,
         1,
         1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -1479,6 +1494,6 @@
         null
       ]
     },
-    "timestamp": 1450143511
+    "timestamp": 1450355542
   }
 }

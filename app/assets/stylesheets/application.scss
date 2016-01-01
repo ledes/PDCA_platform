@@ -30,16 +30,22 @@
  	padding:10px;
  }
  #content {
- 	padding-bottom:100px; /* Height of the footer element */
+ // 	padding-bottom:100px; /* Height of the footer element */
  }
  #footer {
  	background:#ffab62;
  	width:100%;
- 	height:30%;
+  height: auto;
+  padding-bottom: 1rem;
  	position:relative;
  	bottom:0;
  	left:0;
  }
+ @media screen and (min-width: 1025px) {
+    #content {
+        margin-bottom: -75px;
+    }
+}
 /*COURSES INDEX*/
  /** Controls **/
  .controls {
@@ -99,10 +105,34 @@
 #DevAvatar img{
   border-radius: 1000px;
   border: 2px solid #73AD21;
-  width: 80%;
+  width: 100%;
+  height: auto;
 }
 
 /* Developer Name */
 #DevName {}
 /* Developer Bio */
 #DevBio {}
+
+
+/* Lesson show page */
+#lesson_content {
+  margin: 0;
+}
+.content {
+  background-color: #a3a3a3;
+  height: 100%;
+  padding-bottom: 10%;
+}
+
+.content li {
+  // list-style-type: none;
+  color: #e5e5e5;
+  font-size: 80%;
+
+}
+
+.content li a {
+ font-style: normal;
+ color: #e5e5e5;
+}
