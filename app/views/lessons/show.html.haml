@@ -3,4 +3,24 @@
   %h2 Lesson #{@lesson.title}
 
 #content
-  %p Here there should be chapters.title and chapters.body. Button for next lesson
+  .row.equalized-to#lesson_content
+    .large-3.columns.content.panel
+      %h5 Content
+      %ol
+        - @course.lessons.each do |lesson|
+          %li= link_to "#{lesson.title}",
+            course_lesson_path(@course, lesson),
+            class: "links"
+          %hr
+
+    .large-9.columns
+      - @chapters.each do |chapter|
+        %h4= chapter.chapter_name
+        %p= chapter.body
+
+      - if @lesson != @course.lessons.first
+        = link_to "Previous lesson", course_lesson_path(@course, (@lesson.id - 1)), class:"small button", id: "previousButton"
+      - if @lesson != @course.lessons.last
+        = link_to "Next lesson", course_lesson_path(@course, (@lesson.id + 1) ), class:"small button", id: "nextButton"
+      - else
+        = link_to "Quiz", root_path, class:"small button", id:"quizButton"
