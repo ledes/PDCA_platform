@@ -2,6 +2,8 @@ class Admin::LessonsController < ApplicationController
   def show
     @course = Course.find(params[:course_id])
     @lesson = Lesson.find(params[:id])
+    @chapters = @lesson.chapters
+
   end
 
   def new

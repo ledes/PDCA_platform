@@ -1,15 +1,21 @@
-%br/
-= form_tag(admin_courses_path, method: "get") do
-  = text_field_tag :search, params[:search], placeholder: "Search Courses"
-  = submit_tag "Search", name: nil, class: "button small"
+.row{"data-equalizer" => ""}
+  .small-5.medium-4.large-3.columns.administrator_side_bar.panel{"data-equalizer-watch" => ""}
+    %h1 SideBar
 
-%h1 List of courses
-%ul
-  - @courses.each do |course|
-    %li= link_to course.title, admin_course_path(course)
-    = link_to "Edit", edit_admin_course_path(course)
-    = link_to 'Delete', admin_course_path(course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"
 
-= paginate @courses
+  .small-7.medium-8.large-9.columns.panel{"data-equalizer-watch" => ""}
+    %br/
+    = form_tag(admin_courses_path, method: "get") do
+      = text_field_tag :search, params[:search], placeholder: "Search Courses"
+      = submit_tag "Search", name: nil, class: "button small"
 
-= link_to "New course", new_admin_course_path, class:"button"
+    %h1 List of courses
+    %ul
+      - @courses.each do |course|
+        %li= link_to course.title, admin_course_path(course)
+        = link_to "Edit", edit_admin_course_path(course)
+        = link_to 'Delete', admin_course_path(course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"
+
+    = paginate @courses
+
+    = link_to "New course", new_admin_course_path, class:"button"

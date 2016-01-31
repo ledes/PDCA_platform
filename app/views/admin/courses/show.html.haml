@@ -1,22 +1,28 @@
-%h1= @course.title
-%p Description: #{@course.description}
-%p Duration: #{@course.duration}
-%p Price: #{@course.price}
-= link_to "Edit info", edit_admin_course_path(@course)
-= link_to "Add lesson", new_admin_course_lesson_path(@course)
-= link_to "Add quizz", new_admin_course_quiz_path(@course)
-= link_to 'Delete', admin_course_path(@course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"
+.row{"data-equalizer" => ""}
+  .small-5.medium-4.large-3.columns.administrator_side_bar.panel{"data-equalizer-watch" => ""}
+    %h1 SideBar
 
-%h3 Lessons
-%ul
-  - @course.lessons.each do |lesson|
-    %li= link_to lesson.title, admin_course_lesson_path(@course, lesson)
-    = link_to "Edit lesson", edit_admin_course_lesson_path(@course, lesson)
-    = link_to "Delete lesson", admin_course_lesson_path(@course, lesson), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete
 
-%h3 Quizzes
-%ul
-  - @course.quizzes.each do |quiz|
-    %li= link_to quiz.question, admin_course_quiz_path(@course, quiz)
-    = link_to "Edit quiz", edit_admin_course_quiz_path(@course, quiz)
-    = link_to "Delete quiz", admin_course_quiz_path(@course, quiz), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete
+  .small-7.medium-8.large-9.columns.panel{"data-equalizer-watch" => ""}
+    %h1= @course.title
+    %p Description: #{@course.description}
+    %p Duration: #{@course.duration}
+    %p Price: #{@course.price}
+    = link_to "Edit info", edit_admin_course_path(@course), class: "button"
+    = link_to "Add lesson", new_admin_course_lesson_path(@course), class: "button"
+    = link_to "Add quizz", new_admin_course_quiz_path(@course), class: "button"
+    = link_to 'Delete', admin_course_path(@course), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert"
+
+    %h3 Lessons
+    %ul
+      - @course.lessons.each do |lesson|
+        %li= link_to lesson.title, admin_course_lesson_path(@course, lesson)
+        = link_to "Edit lesson", edit_admin_course_lesson_path(@course, lesson), class: "button"
+        = link_to "Delete lesson", admin_course_lesson_path(@course, lesson), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete, class: "button"
+
+    %h3 Quizzes
+    %ul
+      - @course.quizzes.each do |quiz|
+        %li= link_to quiz.question, admin_course_quiz_path(@course, quiz)
+        = link_to "Edit quiz", edit_admin_course_quiz_path(@course, quiz), class: "button"
+        = link_to "Delete quiz", admin_course_quiz_path(@course, quiz), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete, class: "button"

@@ -1,3 +1,7 @@
-%h1 Edit Quiz
-= render "form"
-= link_to "Delete quiz", admin_course_quiz_path(@course, @quiz), id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete
+.row{"data-equalizer" => ""}
+  .small-5.medium-4.large-3.columns.administrator_side_bar.panel{"data-equalizer-watch" => ""}
+    %h1 SideBar
+  .small-7.medium-8.large-9.columns.panel{"data-equalizer-watch" => ""}
+    %h1 Edit Quiz
+    = render "form"
+    = link_to "Delete quiz", admin_course_quiz_path(@course, @quiz), class: "button",id: "delete_button", data: { confirm: "Are you sure?" }, method: :delete
