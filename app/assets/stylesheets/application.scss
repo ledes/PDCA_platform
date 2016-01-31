@@ -23,7 +23,7 @@
  }
  #wrapper {
  	min-height:100%;
- 	position:relative;
+ // 	position:relative;
  }
  #header {
  	background:#ededed;
@@ -41,12 +41,7 @@
  	bottom:0;
  	left:0;
  }
- 
-@media screen and (min-width: 1025px) {
-  #content {
-      margin-bottom: -75px;
-  }
-}
+
 /*COURSES INDEX*/
  /** Controls **/
  .controls {

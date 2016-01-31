@@ -4,7 +4,7 @@
 %p Ideas for this page: all the courses attended, progression? ended?, badges, avatar
 
 - if  @user.courses.length != 0
-  %h1 Course
+  %h1 Courses
   %ul
     - @user.courses.each do |course|
       %li= link_to course.title, course_path(course)
