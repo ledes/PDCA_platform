@@ -32,4 +32,4 @@ Initial sketches of the app on an Ipad:
 ![Imgur](http://cdn.makeagif.com/media/12-03-2015/9e25jc.gif)
 
 ## Features
-(In progress).
+(In progress)
