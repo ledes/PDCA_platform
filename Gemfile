@@ -33,4 +33,3 @@ gem 'devise'
 gem 'foundation-rails'
 gem 'pry'
 gem 'faker'
-gem "ember-cli-rails"
