@@ -14,4 +14,7 @@ Rails.application.routes.draw do
     resources :lessons, only: [:show]
     resources :course_users, only: [:create]
   end
+
+  mount_ember_app :frontend, to: "/frontend"
+
 end
